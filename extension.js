@@ -496,7 +496,7 @@ export default class BullionExtension extends Extension {
     enable() {
         this._settings = this.getSettings();
         this._indicator = new Indicator(this, this._settings);
-        Main.panel.addToStatusArea(this.uuid, this._indicator);
+        Main.panel.addToStatusArea(this.uuid, this._indicator, -1, 'left'); // left side of the top bar, after Activities
     }
 
     disable() {
